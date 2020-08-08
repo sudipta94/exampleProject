@@ -1,0 +1,138 @@
+<div class="mat-elevation-z5 rounded-div"fxLayout="row wrap" fxLayoutGap="10px">
+    <div fxFlex="0 1 calc(50% - 10px)" fxLayout="row" class="text-block div-right-border">
+        <div fxFlex="30" fxLayoutAlign="start center" class="accent-text">{{languageService.getText("Name")}}
+        </div>
+        <div fxFlex="10" fxLayoutAlign="center center" class="accent-text">:
+        </div>
+        <div fxFlex="60" fxLayoutAlign="start center" *ngIf="!!(intermData$ | async)">
+            <b>{{(intermData$ | async).first_name }} {{(intermData$| async).last_name}}</b></div>
+    </div>
+    <div fxFlex="0 1 calc(50% - 10px)" fxLayout="row" class="text-block">
+        <div fxFlex="30" fxLayoutAlign="start center" class="accent-text">{{languageService.getText("Email")}}
+        </div>
+        <div fxFlex="10" fxLayoutAlign="center center" class="accent-text">:
+        </div>
+        <div fxFlex="60" fxLayoutAlign="start center" *ngIf="!!(intermData$ | async)">
+            <b>{{(intermData$ | async).email}}</b></div>
+    </div>
+</div>
+<div  fxLayout="row" fxLayoutAlign="center center" class="row-height">
+    <div fxFlex="70%" class="mat-elevation-z5 rounded-div">
+        <div fxLayoutAlign="start center"><h3>{{languageService.getText("PresentAddress")}}</h3></div>
+        <div class="form-container">
+            <form [formGroup]="presentAddress">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("address")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("address")}}'
+                                formControlName="address" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("city")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("city")}}'
+                                formControlName="city" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("country")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("country")}}'
+                                formControlName="country" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("Pin")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("Pin")}}'
+                                formControlName="pin" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div fxLayoutAlign="start center">
+            <h3>{{languageService.getText("PermanentAddress")}}</h3>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center" class="button-filter-container">
+            <div fxFlex="20">
+                <mat-checkbox (change)="ShowUsedUnusedCoupon($event.source.checked)">Same As Present Address</mat-checkbox>
+            </div>
+        </div>
+        <div class="form-container">
+            <form [formGroup]="permanentAddrtess">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("address")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("address")}}'
+                                formControlName="address" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("city")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("city")}}'
+                                formControlName="city" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("country")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("country")}}'
+                                formControlName="country" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("Pin")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("Pin")}}'
+                                formControlName="pin" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" [style.width.%]="100">
+                    <div fxFlex="25" fxLayoutAlign="end center"></div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <div fxFlex="80" fxLayoutAlign="end center">
+                            <button mat-raised-button color="accent" type="button" class="button-margin" (click)="Back()">{{languageService.getText("BackButton")}}</button>
+                            <button mat-raised-button color="primary" type="button" class="button-margin"
+                            (click)="Submit()" [disabled]="presentAddress.invalid || permanentAddrtess.invalid">{{languageService.getText("submitButton")}}</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

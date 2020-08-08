@@ -1,0 +1,62 @@
+<div  fxLayout="row" fxLayoutAlign="center center" class="row-height">
+    <div fxFlex="70%" class="mat-elevation-z5 rounded-div">
+        <div class="form-container">
+            <form [formGroup]="signupform">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("firstName")}} </mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("firstName")}}'
+                                formControlName="first_name" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("lastName")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("lastName")}}'
+                                formControlName="last_name" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("Email")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("Email")}}'
+                                formControlName="email" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <div fxFlex="25" fxLayoutAlign="end center">
+                        <mat-label>{{languageService.getText("Password")}}</mat-label>
+                    </div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <mat-form-field [style.width.%]="80" appearance="outline">
+                            <input matInput placeholder='{{languageService.getText("Password")}}'
+                                formControlName="password" required autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" [style.width.%]="100">
+                    <div fxFlex="25" fxLayoutAlign="end center"></div>
+                    <div fxFlex="75" fxLayoutAlign="center center">
+                        <div fxFlex="80" fxLayoutAlign="end center">
+                            <button mat-raised-button color="accent" type="button" class="button-margin" (click)="back()">{{languageService.getText("BackButton")}}</button>
+                            <button mat-raised-button color="primary" type="button" class="button-margin"
+                            (click)="next()" [disabled]="signupform.invalid">{{languageService.getText("NextButton")}}</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

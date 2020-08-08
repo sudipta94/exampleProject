@@ -1,0 +1,14 @@
+<mat-toolbar class="header-toolbar">
+    <mat-toolbar-row [style.height.%]="100" *ngIf="(IsLogin$  |async).isLogin">
+        <Span [style.width.%]="80"> </Span>
+        <span [style.fontSize.%]="80">
+            <b class="colorText">Hello, {{(IsLogin$  | async).userDetail.first_name}}</b>
+        </span>
+        <button mat-icon-button type="button" [matMenuTriggerFor]="appMenu">
+            <mat-icon color="primary" [style.fontSize.px]="24">account_box</mat-icon>
+        </button>
+        </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item type="button" (click)="Logout()">LogOut</button>
+</mat-menu>

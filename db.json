@@ -1,0 +1,49 @@
+{
+  "user_data": [
+    {
+      "parmanent_address": "krishnagar",
+      "email": "das.sudipta94@gmail.com",
+      "first_name": "sudipta",
+      "last_name": "das",
+      "password": "1234",
+      "parmanent_city": "krishnagar",
+      "parmanent_country": "india",
+      "parmanent_pin": "741101",
+      "present_address": "krishnagar",
+      "present_city": "krishnagar",
+      "present_country": "india",
+      "present_pin": "741101",
+      "id": 1
+    },
+    {
+      "parmanent_address": "s",
+      "email": "s@g.com",
+      "first_name": "s",
+      "last_name": "s",
+      "password": "1234",
+      "parmanent_city": "s",
+      "parmanent_country": "s",
+      "parmanent_pin": "741102",
+      "present_address": "s",
+      "present_city": "s",
+      "present_country": "s",
+      "present_pin": "741102",
+      "id": 2
+    },
+    {
+      "parmanent_address": "s",
+      "email": "s@s.conm",
+      "first_name": "SUDIPTA",
+      "last_name": "DAS",
+      "password": "12123",
+      "parmanent_city": "s",
+      "parmanent_country": "s",
+      "parmanent_pin": "s",
+      "present_address": "s",
+      "present_city": "s",
+      "present_country": "s",
+      "present_pin": "s",
+      "id": 3
+    }
+  ]
+}

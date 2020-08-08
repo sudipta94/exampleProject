@@ -1,1 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.view-container {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+.main-content {
+    flex: 1 0 auto;
+}
+
+.main-flex {
+    height: 100%;
+}
+.footer {
+    flex-shrink: 0;
+}
+.login-background {
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;    
+}
+.logo {
+    position: relative;
+    top: 20%;
+    height: 70%;
+    background-image: url("./assets/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;    
+}
+.logo2 {
+    position: relative;
+    top: 20%;
+    height: 70%;
+    background-image: url("./assets/logo2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;    
+}
+.mat-form-field-wrapper {
+    padding: 0px;
+    .mat-form-field-outline-thick{
+        background-color: red;
+        border-radius: 5px;
+    }
+    .mat-form-field-outline{
+        background-color: #6ca5f5;
+        border-radius: 5px;
+    }
+    .mat-form-field-infix{
+        border-top: 5px solid transparent;
+        padding: 8px;
+    }
+    .mat-form-field-label{
+        color: red
+    }
+    .mat-icon.mat-accent{
+        color: gray
+    }
+}
+.button-margin {
+    margin-left: 8px !important;
+    margin-top: 10px !important;
+}
+.rounded-div {
+    margin: 10px 0px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color:  #6ca5f5;
+}
